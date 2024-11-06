@@ -1,0 +1,11 @@
+let user=require("../controlers/controler")
+let express=require("express")
+let route=express.Router()
+
+route.post("/data",user.userControler)
+route.get("/users",user.retrivingdata)
+route.get("/users/:id",user.retrivebyid)
+route.put("/update/:id",user.updatebyId)
+route.delete("/delete/:id",user.deleteuser)
+
+module.exports=route
