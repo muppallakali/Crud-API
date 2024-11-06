@@ -17,8 +17,11 @@ mongoose.connect(process.env.abcd)
 app.use(bodyparser.json())
 app.use(cors())
 app.use("/abc",router)
+app.use("/",(req,res)=>{
+    res.send(<h1>Welcome to crud operations Backend</h1>)
+})
 
 
 
-port=3000
+port=process.env.port||3000
 app.listen(port,()=>console.log(`port is running on ${port}`))
