@@ -18,7 +18,7 @@ app.use(bodyparser.json())
 app.use(cors())
 app.use("/abc",router)
 app.use("/",(req,res)=>{
-    res.send("<h1>Welcome to crud operations Backend</h1>")
+    res.send("Welcome to crud operations Backend")
 })
 
 
