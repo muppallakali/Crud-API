@@ -16,7 +16,7 @@ mongoose.connect(process.env.abcd)
 
 app.use(bodyparser.json())
 app.use(cors())
-app.use("/abc",router)
+app.use("/",router)
 app.use("/",(req,res)=>{
     res.send("Welcome to crud operations Backend")
 })
